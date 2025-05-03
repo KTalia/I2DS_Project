@@ -114,7 +114,7 @@ def export_db_to_csv(db_cursor, folder="sakamknigi.mk", filename="sakam_knigi_bo
     os.makedirs(folder, exist_ok=True)
     filepath = os.path.join(folder, filename)
 
-    db_cursor.execute("SELECT title, author, real_price, sale_price, sale, category, retrieved_at FROM books")
+    db_cursor.execute("SELECT title, author, real_price, sale_price, sale, category, retrieved_at FROM sakamknigi_books")
     rows = db_cursor.fetchall()
 
     with open(filepath, mode="w", newline='', encoding="utf-8-sig") as file:
