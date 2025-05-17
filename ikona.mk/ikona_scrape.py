@@ -35,7 +35,7 @@ def get_last_page(driver, base_url):
             try:
                 page_numbers.append(int(el.text))
             except ValueError:
-                continue  # Skip non-numeric elements like "→"
+                continue  
 
         if page_numbers:
             return max(page_numbers)
@@ -57,11 +57,22 @@ def export_db_to_csv(db_cursor, folder="ikona.mk", filename="ikona_books.csv"):
         writer.writerows(rows)
 
 def create_database():
-    conn = sqlite3.connect('ikona_books.db')
+    # db_path = os.path.join("data", "books.db")
+
+    # os.makedirs("data", exist_ok=True)
+
+    # conn = sqlite3.connect(db_path)
+    # cursor = conn.cursor()
+
+    os.makedirs("ikona.mk", exist_ok=True)
+
+    db_path = os.path.join("ikona.mk", "ikona_books.db")
+
+    conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
 
-
     cursor.execute(''' 
+        
         CREATE TABLE IF NOT EXISTS ikona_books (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             title TEXT NOT NULL,
@@ -100,7 +111,6 @@ def scrape_books(driver, category_url, category_name, db_cursor, one_page_catego
             print(f"Timeout while waiting for books on: {page_url}")
             continue
 
-        # Get all book links on the page
         book_elements = driver.find_elements(By.CSS_SELECTOR, "li.product a.woocommerce-LoopProduct-link")
         book_links = [book.get_attribute("href") for book in book_elements]
 
@@ -122,7 +132,6 @@ def scrape_books(driver, category_url, category_name, db_cursor, one_page_catego
             sale_price = None
             sale = False
             try:
-                # Try to get sale prices first
                 real_price = driver.find_element(By.CSS_SELECTOR, "p.price del span.woocommerce-Price-amount").text
                 sale_price = driver.find_element(By.CSS_SELECTOR, "p.price ins span.woocommerce-Price-amount").text
                 sale = True
@@ -138,7 +147,6 @@ def scrape_books(driver, category_url, category_name, db_cursor, one_page_catego
 
             retrieved_at = datetime.now().date()
 
-            # Insert into DB without the URL column
             insert_query = """
                 INSERT INTO ikona_books (title, author, real_price, sale_price, sale, category, retrieved_at)
                 VALUES (?, ?, ?, ?, ?, ?, ?)
@@ -163,7 +171,7 @@ def main():
         ("https://ikona.mk/product-category/semejstvo-i-zdrav-zivot/","Семејство и здрав живот"),
         ("https://ikona.mk/product-category/filosofija/","Филозофија"),
         ("https://ikona.mk/product-category/detsko-katce/detski/","Детски"),
-        ("https://ikona.mk/product-category/ikoni/?product-page=2","Икони") 
+        ("https://ikona.mk/product-category/ikoni/", "Икона")
     ]
 
     one_page_categories = {

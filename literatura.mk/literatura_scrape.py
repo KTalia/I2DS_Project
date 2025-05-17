@@ -30,12 +30,15 @@ def get_last_page(driver, base_url):
         last_page_el = driver.find_element(By.CSS_SELECTOR, 'ul.pagination li a[rel="last"]')
         return int(last_page_el.text)
     except Exception:
-        # If not found, assume it's just one page
         return 1
 
 
 def create_database():
-    conn = sqlite3.connect('literatura_books.db')
+    os.makedirs("literatura.mk", exist_ok=True)
+
+    db_path = os.path.join("literatura.mk", "literatura_books.db")
+
+    conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
 
     cursor.execute(''' 
@@ -128,7 +131,7 @@ def main():
     try:
         scrape_books(driver, url, cursor)
         conn.commit()
-        # export_db_to_csv(cursor)
+        export_db_to_csv(cursor)
     finally:
         conn.close()
         driver.quit()

@@ -90,9 +90,12 @@ def scrape_books(driver, category_url, category_name, db_cursor):
         time.sleep(2)
 
 def create_database():
-    conn = sqlite3.connect('sakamknigi_books.db')
-    cursor = conn.cursor()
+    os.makedirs("sakamknigi.mk", exist_ok=True)
 
+    db_path = os.path.join("sakamknigi.mk", "sakamknigi_books.db")
+
+    conn = sqlite3.connect(db_path)
+    cursor = conn.cursor()
 
     cursor.execute(''' 
         CREATE TABLE IF NOT EXISTS sakamknigi_books (
