@@ -34,9 +34,16 @@ def get_last_page(driver, base_url):
 
 
 def create_database():
-    os.makedirs("literatura.mk", exist_ok=True)
+    # os.makedirs("literatura.mk", exist_ok=True)
 
-    db_path = os.path.join("literatura.mk", "literatura_books.db")
+    # db_path = os.path.join("literatura.mk", "literatura_books.db")
+
+    # conn = sqlite3.connect(db_path)
+    # cursor = conn.cursor()
+
+    db_path = os.path.join("data", "books.db")
+
+    os.makedirs("data", exist_ok=True)
 
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()

@@ -90,9 +90,16 @@ def scrape_books(driver, category_url, category_name, db_cursor):
         time.sleep(2)
 
 def create_database():
-    os.makedirs("sakamknigi.mk", exist_ok=True)
+    # os.makedirs("sakamknigi.mk", exist_ok=True)
 
-    db_path = os.path.join("sakamknigi.mk", "sakamknigi_books.db")
+    # db_path = os.path.join("sakamknigi.mk", "sakamknigi_books.db")
+
+    # conn = sqlite3.connect(db_path)
+    # cursor = conn.cursor()
+
+    db_path = os.path.join("data", "books.db")
+
+    os.makedirs("data", exist_ok=True)
 
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()

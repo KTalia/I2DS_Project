@@ -57,16 +57,9 @@ def export_db_to_csv(db_cursor, folder="ikona.mk", filename="ikona_books.csv"):
         writer.writerows(rows)
 
 def create_database():
-    # db_path = os.path.join("data", "books.db")
+    db_path = os.path.join("data", "books.db")
 
-    # os.makedirs("data", exist_ok=True)
-
-    # conn = sqlite3.connect(db_path)
-    # cursor = conn.cursor()
-
-    os.makedirs("ikona.mk", exist_ok=True)
-
-    db_path = os.path.join("ikona.mk", "ikona_books.db")
+    os.makedirs("data", exist_ok=True)
 
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()

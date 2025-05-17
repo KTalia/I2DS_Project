@@ -121,9 +121,17 @@ def export_db_to_csv(db_cursor, folder="akademskakniga.mk", filename="akademska_
 
 def create_database():
 
-    os.makedirs("akademskakniga.mk", exist_ok=True)
+    # os.makedirs("akademskakniga.mk", exist_ok=True)
 
-    db_path = os.path.join("akademskakniga.mk", "akademskakniga_books.db")
+    # db_path = os.path.join("akademskakniga.mk", "akademskakniga_books.db")
+
+    # conn = sqlite3.connect(db_path)
+    # cursor = conn.cursor()
+
+
+    db_path = os.path.join("data", "books.db")
+
+    os.makedirs("data", exist_ok=True)
 
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
