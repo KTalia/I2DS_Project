@@ -55,7 +55,7 @@ def create_database():
 
 def scrape_books(driver, base_url, db_cursor):
     last_page = get_last_page(driver, base_url)
-    print(f"last page:", last_page)
+
     book_data = []
     for i in range(1, last_page):
         url = base_url if i == 1 else f"{base_url}page-{i}"
@@ -64,7 +64,7 @@ def scrape_books(driver, base_url, db_cursor):
     
         WebDriverWait(driver, 10).until(
             EC.presence_of_all_elements_located((By.CSS_SELECTOR, "div.item-data.col-xs-12.col-sm-12"))
-        )
+        ) 
 
         books = driver.find_elements(By.CSS_SELECTOR, "div.item-data.col-xs-12.col-sm-12")
 
