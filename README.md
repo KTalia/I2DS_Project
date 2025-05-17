@@ -11,9 +11,10 @@
 I2DS_Project/
 │
 ├── akademskakniga.mk/                           
-│   ├── dag.py                      
-│   ├── preprocess_data.ipynb       
-│   └── preprocessed_data.csv       
+│   ├── akademska_books.csv
+│   ├── akademska_books.db           
+│   ├── preprocess_akademska.ipynb       
+│   └──  akademska_scrape.py      
 │
 ├── literatura.mk/
 │   ├── literatura_books.csv                     
@@ -21,11 +22,17 @@ I2DS_Project/
 │   ├── literatura_preprocess.ipynb  
 │   └── literatura_scrape.py              
 ├── sakamknigi.mk/
-│   ├── sakamknigi_books.csv                     
+│   ├── sakamknigi_books.csv
+│   ├── sakamknigi_books.db                     
 │   ├── preprocess_sakamknigi.ipynb
-│   ├── sakamknigi_books.db   
-│   └── sakamknigi_scrape.py                
+│   └── sakamknigi_scrape.py
+├── ikona.mk/
+│   ├── ikona_books.csv
+│   ├── ikona_books.db                     
+│   ├── preprocess_ikona.ipynb
+│   └── ikona_scrape.py
 
+            
 ```
 ---
 
