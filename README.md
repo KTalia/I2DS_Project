@@ -1,4 +1,35 @@
-# I2DS_Project
+# I2DS_Project: Collecting Data for Various Products from Multiple Bookstores, Including Preprocessing and Standardization
+- This project focuses on the collection, preprocessing, and standardization of product data from three different online bookstores: [Literatura.mk](https://www.literatura.mk/) , [SakamKnigi.mk](https://sakamknigi.mk/shop/) , and [AkademskaKniga.mk](https://akademskakniga.mk/). The goal was to automate the data collection process, clean and organize the extracted information, and prepare it for future analysis or application in other systems.
+---
+## Technologies Used
+- **Python**
+- **Libraries and Modules:** – selenium, pandas, numpy, sqlite3, csv, missingno     
+- **SQLite** – Relational database to store scraped data efficiently
+---
+## Project Structure
+```
+I2DS_Project/
+│
+├── akademskakniga.mk/                           
+│   ├── dag.py                      
+│   ├── preprocess_data.ipynb       
+│   └── preprocessed_data.csv       
+│
+├── literatura.mk/
+│   ├── literatura_books.csv                     
+│   ├── literatura_books.db
+│   ├── literatura_preprocess.ipynb  
+│   └── literatura_scrape.py              
+├── sakamknigi.mk/
+│   ├── sakamknigi_books.csv                     
+│   ├── preprocess_sakamknigi.ipynb
+│   ├── sakamknigi_books.db   
+│   └── sakamknigi_scrape.py                
+
+```
+---
+
+
 ## 1. Scrape
 ### 1. SakamKnigi.mk
 ### 2. Literatura.mk
