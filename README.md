@@ -11,27 +11,27 @@ and  [Ikona.mk](https://ikona.mk/). The goal was to automate the data collection
 ```
 I2DS_Project/
 │
+├── data/                           
+│   ├── original_datasets/     # Raw scraped book datasets
+│   ├── preprocessed_datasets/ # Cleaned and processed book datasets       
+│   └──  books.db              # SQLite database file
+│ 
 ├── akademskakniga.mk/                           
-│   ├── akademska_books.csv
-│   ├── akademska_books.db           
 │   ├── preprocess_akademska.ipynb       
-│   └──  akademska_scrape.py      
-│
+│   └──  akademska_scrape.py
+│    
 ├── literatura.mk/
-│   ├── literatura_books.csv                     
-│   ├── literatura_books.db
 │   ├── literatura_preprocess.ipynb  
-│   └── literatura_scrape.py              
+│   └── literatura_scrape.py
+│               
 ├── sakamknigi.mk/
-│   ├── sakamknigi_books.csv
-│   ├── sakamknigi_books.db                     
 │   ├── preprocess_sakamknigi.ipynb
 │   └── sakamknigi_scrape.py
+│ 
 ├── ikona.mk/
-│   ├── ikona_books.csv
-│   ├── ikona_books.db                     
 │   ├── preprocess_ikona.ipynb
 │   └── ikona_scrape.py
+└── create_books_db.py          # Script to create the database
 
             
 ```
