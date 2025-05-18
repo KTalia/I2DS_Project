@@ -44,7 +44,7 @@ def get_last_page(driver, base_url):
     except Exception:
         return 1
 
-def export_db_to_csv(db_cursor, folder="ikona.mk", filename="ikona_books.csv"):
+def export_db_to_csv(db_cursor, folder="../data/original_datasets", filename="ikona_books.csv"):
     os.makedirs(folder, exist_ok=True)
     filepath = os.path.join(folder, filename)
 

@@ -105,7 +105,7 @@ def scrape_books(driver, category_url, category_name, db_cursor, one_page_catego
 
             time.sleep(2)
 
-def export_db_to_csv(db_cursor, folder="akademskakniga.mk", filename="akademska_books.csv"):
+def export_db_to_csv(db_cursor, folder="../data/original_datasets", filename="akademskakniga_books.csv"):
     os.makedirs(folder, exist_ok=True)
     filepath = os.path.join(folder, filename)
 

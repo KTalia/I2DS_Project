@@ -112,12 +112,7 @@ if __name__ == "__main__":
     copy_data("literatura.mk/literatura_books.db", "literatura_books", target_conn, "literatura_books")
     copy_data("sakamknigi.mk/sakamknigi_books.db", "sakamknigi_books", target_conn, "sakamknigi_books")
     copy_data("akademskakniga.mk/akademskakniga_books.db", "akademskakniga_books", target_conn, "akademskakniga_books")
-
-    # export_table_to_csv(target_conn, "ikona_books", os.path.join("data", "ikona_books.csv"))
-    # export_table_to_csv(target_conn, "literatura_books", os.path.join("data", "literatura_books.csv"))
-    # export_table_to_csv(target_conn, "sakamknigi_books", os.path.join("data", "sakamknigi_books.csv"))
-    # export_table_to_csv(target_conn, "akademskakniga_books", os.path.join("data", "akademskakniga_books.csv"))
-
+    
     target_conn.close()
     print("All data successfully merged into data/books.db")
 

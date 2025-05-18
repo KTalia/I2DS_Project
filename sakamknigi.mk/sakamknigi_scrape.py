@@ -120,7 +120,7 @@ def create_database():
     conn.commit()
     return conn, cursor
 
-def export_db_to_csv(db_cursor, folder="sakamknigi.mk", filename="sakamknigi_books.csv"):
+def export_db_to_csv(db_cursor, folder="../data/original_datasets", filename="sakamknigi_books.csv"):
     os.makedirs(folder, exist_ok=True)
     filepath = os.path.join(folder, filename)
 
