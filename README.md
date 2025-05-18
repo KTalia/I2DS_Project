@@ -46,4 +46,4 @@ The following table summarizes the datasets scraped from each bookstore along wi
 | [Ikona.mk](https://ikona.mk)                   | 13                   | 1100                   | 32                         | [ikona_scrape.py](./ikona.mk/ikona_scrape.py)                       | [preprocess_ikona.ipynb](./ikona.mk/preprocess_ikona.ipynb)                       |
 ---
 ## Project Documentation
-[Project Documentation (PDF)](./I2DS_Project/I2DS_Project_Documentation.pdf)
+[Project Documentation (PDF)](https://github.com/KTalia/I2DS_Project/blob/main/I2DS_Project_Documentation.pdf)
