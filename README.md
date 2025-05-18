@@ -1,6 +1,7 @@
 # I2DS_Project: Collecting Data from Multiple Bookstores, Including Preprocessing and Standardization
 - This project focuses on the collection, preprocessing, and standardization of product data from four different online bookstores: [Literatura.mk](https://www.literatura.mk/) , [SakamKnigi.mk](https://sakamknigi.mk/shop/) , [AkademskaKniga.mk](https://akademskakniga.mk/)
 and  [Ikona.mk](https://ikona.mk/). The goal was to automate the data collection process, clean and organize the extracted information, and prepare it for future analysis or application in other systems.
+- Detailed documentation of the project is available here: [Project Documentation (PDF)](https://github.com/KTalia/I2DS_Project/blob/main/I2DS_Project_Documentation.pdf)
 ---
 ## Technologies Used
 - **Python**
@@ -45,5 +46,3 @@ The following table summarizes the datasets scraped from each bookstore along wi
 | [AkademskaKniga.mk](https://akademskakniga.mk) | 37                   | 21393                  | 19228                      | [akademska_scrape.py](./akademskakniga.mk/akademska_scrape.py)       | [preprocess_akademska.ipynb](./akademskakniga.mk/preprocess_akademska.ipynb)       |
 | [Ikona.mk](https://ikona.mk)                   | 13                   | 1100                   | 32                         | [ikona_scrape.py](./ikona.mk/ikona_scrape.py)                       | [preprocess_ikona.ipynb](./ikona.mk/preprocess_ikona.ipynb)                       |
 ---
-## Project Documentation
-[Project Documentation (PDF)](https://github.com/KTalia/I2DS_Project/blob/main/I2DS_Project_Documentation.pdf)
