@@ -5,7 +5,7 @@ and  [Ikona.mk](https://ikona.mk/). The goal was to automate the data collection
 ## Technologies Used
 - **Python**
 - **Libraries and Modules:** – selenium, pandas, numpy, sqlite3, csv, missingno     
-- **SQLite** – Relational database to store scraped data efficiently
+- **SQLite**
 ---
 ## Project Structure
 ```
