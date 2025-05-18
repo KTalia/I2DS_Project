@@ -5,46 +5,44 @@ and  [Ikona.mk](https://ikona.mk/). The goal was to automate the data collection
 ## Technologies Used
 - **Python**
 - **Libraries and Modules:** – selenium, pandas, numpy, sqlite3, csv, missingno     
-- **SQLite** – Relational database to store scraped data efficiently
+- **SQLite**
 ---
 ## Project Structure
 ```
 I2DS_Project/
 │
+├── data/                           
+│   ├── original_datasets/     # Raw scraped book datasets
+│   ├── preprocessed_datasets/ # Cleaned and processed book datasets       
+│   └──  books.db              # SQLite database file
+│ 
 ├── akademskakniga.mk/                           
-│   ├── akademska_books.csv
-│   ├── akademska_books.db           
 │   ├── preprocess_akademska.ipynb       
-│   └──  akademska_scrape.py      
-│
+│   └──  akademska_scrape.py
+│    
 ├── literatura.mk/
-│   ├── literatura_books.csv                     
-│   ├── literatura_books.db
 │   ├── literatura_preprocess.ipynb  
-│   └── literatura_scrape.py              
+│   └── literatura_scrape.py
+│               
 ├── sakamknigi.mk/
-│   ├── sakamknigi_books.csv
-│   ├── sakamknigi_books.db                     
 │   ├── preprocess_sakamknigi.ipynb
 │   └── sakamknigi_scrape.py
+│ 
 ├── ikona.mk/
-│   ├── ikona_books.csv
-│   ├── ikona_books.db                     
 │   ├── preprocess_ikona.ipynb
 │   └── ikona_scrape.py
+└── create_books_db.py          # Script to create the database
 
             
 ```
 ---
+## Bookstore Data Overview and Resources
+The following table summarizes the datasets scraped from each bookstore along with links to their respective scraper scripts and Jupyter notebooks for data processing and analysis.
 
-## 1. Scrape
-### 1. SakamKnigi.mk
-### 2. Literatura.mk
-### 3. AkademskaKniga.mk
-### 4. Ikona.mk
-
-## 2. Preprocess / Clean data
-### 1. SakamKnigi.mk
-### 2. Literatura.mk
-### 3. AkademskaKniga.mk
-### 4. Ikona.mk
+| Bookstore              | Number of Categories | Number of Books Scraped | Number of Discounted Books | Scraper Script                                   | Data Notebook                                    |
+|------------------------|----------------------|------------------------|----------------------------|-------------------------------------------------|-------------------------------------------------|
+| [Literatura.mk](https://literatura.mk)         | 99                   | 20188                  | 0                          | [literatura_scrape.py](./literatura.mk/literatura_scrape.py)         | [literatura_preprocess.ipynb](./literatura.mk/preprocess_literatura.ipynb)         |
+| [SakamKnigi.mk](https://sakamknigi.mk)         | 11                   | 2167                   | 11                         | [sakamknigi_scrape.py](./sakamknigi.mk/sakamknigi_scrape.py)         | [preprocess_sakamknigi.ipynb](./sakamknigi.mk/preprocess_sakamknigi.ipynb)         |
+| [AkademskaKniga.mk](https://akademskakniga.mk) | 37                   | 21393                  | 19228                      | [akademska_scrape.py](./akademskakniga.mk/akademska_scrape.py)       | [preprocess_akademska.ipynb](./akademskakniga.mk/preprocess_akademska.ipynb)       |
+| [Ikona.mk](https://ikona.mk)                   | 13                   | 1100                   | 32                         | [ikona_scrape.py](./ikona.mk/ikona_scrape.py)                       | [preprocess_ikona.ipynb](./ikona.mk/preprocess_ikona.ipynb)                       |
+---
