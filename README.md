@@ -31,9 +31,8 @@ I2DS_Project/
 ├── ikona.mk/
 │   ├── preprocess_ikona.ipynb
 │   └── ikona_scrape.py
-└── create_books_db.py          # Script to create the database
-
-            
+│
+└── create_books_db.py          # Script to create the database      
 ```
 ---
 ## Bookstore Data Overview and Resources
@@ -46,3 +45,5 @@ The following table summarizes the datasets scraped from each bookstore along wi
 | [AkademskaKniga.mk](https://akademskakniga.mk) | 37                   | 21393                  | 19228                      | [akademska_scrape.py](./akademskakniga.mk/akademska_scrape.py)       | [preprocess_akademska.ipynb](./akademskakniga.mk/preprocess_akademska.ipynb)       |
 | [Ikona.mk](https://ikona.mk)                   | 13                   | 1100                   | 32                         | [ikona_scrape.py](./ikona.mk/ikona_scrape.py)                       | [preprocess_ikona.ipynb](./ikona.mk/preprocess_ikona.ipynb)                       |
 ---
+## Project Documentation
+[Project Documentation (PDF)](./I2DS_Project/I2DS_Project_Documentation.pdf)
