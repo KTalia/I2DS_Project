@@ -37,10 +37,6 @@ I2DS_Project/
 ```
 ---
 ## Bookstore Data Overview and Resources
-
-The following table summarizes the datasets scraped from each bookstore along with links to their respective scraper scripts and Jupyter notebooks for data processing and analysis.
-## Bookstore Data Overview and Resources
-
 The following table summarizes the datasets scraped from each bookstore along with links to their respective scraper scripts and Jupyter notebooks for data processing and analysis.
 
 | Bookstore              | Number of Categories | Number of Books Scraped | Number of Discounted Books | Scraper Script                                   | Data Notebook                                    |
