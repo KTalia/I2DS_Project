@@ -4,8 +4,7 @@ and  [Ikona.mk](https://ikona.mk/). The goal was to automate the data collection
 - Detailed documentation of the project is available here: [Project Documentation (PDF)](https://github.com/KTalia/I2DS_Project/blob/main/I2DS_Project_Documentation.pdf)
 ---
 ## Technologies Used
-- **Python**
-- **Libraries and Modules:** – selenium, pandas, numpy, sqlite3, csv, missingno     
+- **Python** (selenium, pandas, numpy, sqlite3, csv, missingno)     
 - **SQLite**
 ---
 ## Project Structure
