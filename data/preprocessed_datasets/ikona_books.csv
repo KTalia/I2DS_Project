@@ -1,4 +1,4 @@
-﻿Title,Author,Real Price,Sale Price,IsOnSale,Category,Retrieved At,Discount (%)
+﻿title,author,real_price,sale_price,IsOnSale,category,retrieved_at,Discount (%)
 АУТИСТОТ И ГУЛАБОТ ПИСМОНОСЕЦ,Родан Ал Галиди,449.0,399.0,True,Романса,2025-05-17,11.0
 БЕЗНАДЕЖНО,Колин Хувер,450.0,0.0,False,Романса,2025-05-17,0.0
 ВИРТУОЗ,Маргрит де Мор,449.0,0.0,False,Романса,2025-05-17,0.0
